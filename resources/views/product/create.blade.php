@@ -10,7 +10,8 @@
         </div>
         <div class="form-input">
             <label class="label" for="price">price : </label>
-            <input class="input" type="number" name="price" id="price" required value="{{ old('price') }}">
+            <input class="input" type="number" name="price" id="price" step="0.01" required
+                value="{{ old('price') }}">
             @error('price')
                 <span class="error">{{ $message }}</span>
             @enderror

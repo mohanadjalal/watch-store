@@ -183,7 +183,7 @@ span.success-flash {
 .cart { 
   position: fixed;
   right: 0;
-  bottom: 6rem;
+  bottom: 12vh;
   background-color: var(--first) ; 
   border : double var(--fourth) ; 
   border-radius: 1rem;
