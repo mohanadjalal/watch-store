@@ -1,0 +1,92 @@
+
+
+
+div.product { 
+    display:  flex ; 
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    margin: auto;
+    position: relative;
+    background-color: var(--third);
+}
+
+.img { 
+    width: 30%;
+    height: 90%;
+    background-repeat:no-repeat ;
+    background-size: contain;
+    background-position: center;
+    background-color: var(--fourth);
+    margin-left: 1rem;
+    border-radius: 2rem;
+    border:  groove var(--first);
+}
+ 
+
+.info  { 
+    width: 70%;
+    height: 100%;
+    padding: 1rem;
+    
+}
+
+.btns { 
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+
+
+
+.info p { 
+    text-align: left;
+    width: 80%;
+    font-size: larger;
+    font-family: sans-serif;
+}
+
+
+.btn { 
+    padding: .8rem .16rem;
+    width: 6rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: initial;
+
+    border-radius: .5rem;
+    cursor: pointer;
+    
+}
+
+.btn-edit , .btn-edit:active{ 
+    background-color: #DCD7C9;
+    border: solid .15rem #2C3639 ;
+
+}
+
+.btn-edit:hover { 
+    background-color:#2C3639 ;
+    border: solid .15rem  black;
+    color: #DCD7C9;
+}
+
+.btn-del , .btn-del:active{ 
+    background-color: #DCD7C9;
+    border: solid .15rem rgb(189, 0, 0) ;
+    color: red;
+
+}
+
+.btn-del:hover { 
+    background-color:rgb(189, 0, 0) ;
+    border: solid .15rem  #DCD7C9;
+    color:  #DCD7C9;
+}
