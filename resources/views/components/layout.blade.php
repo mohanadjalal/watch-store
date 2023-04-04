@@ -27,6 +27,15 @@
                     Products</a></li>
         </div>
 
+        @if (request()->path() === 'products')
+            <div class="search">
+                <form action="#" method="GET">
+                    <label for="search"> Search: </label> <input type="text" id="search" name="search"
+                        value="{{ request('search') }}">
+                </form>
+            </div>
+        @endif
+
         <div class="auth">
             @auth
 

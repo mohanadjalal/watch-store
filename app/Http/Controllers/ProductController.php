@@ -13,9 +13,15 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products = Product::orderBy('created_at', 'DESC');
+        $search = request('search');
+        if ($search) {
+            $products = $products->where('title', 'like', "%{$search}%")->orWhere('description', 'like', "%{$search}%");
+        }
 
 
-        return view('products', ['products' => Product::orderBy('created_at', 'DESC')->paginate(8)]);
+
+        return view('products', ['products' => $products->paginate(8)]);
     }
 
     /**

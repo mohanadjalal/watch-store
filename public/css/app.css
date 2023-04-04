@@ -34,6 +34,7 @@ div.header {
   font-size: larger;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -46,6 +47,15 @@ div.header {
   box-shadow: 0px 5px 15px var(--fourth);
   z-index: 9999999999999999999;
 
+}
+
+div.search { 
+  color: var(--first);
+}
+
+input[name=search] { 
+  color: var(--fourth);
+  padding: .18rem;
 }
 
 
