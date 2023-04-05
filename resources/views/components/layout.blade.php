@@ -9,7 +9,8 @@
     <title>{{ $title ?? 'Watch Store' }}</title>
 
     <link rel="stylesheet" href="/../css/app.css">
-    <link rel="stylesheet" href="/../css/{{ $css }}">
+    <link rel="stylesheet" href="/../css/{{ $css ?? '' }}">
+
 
 </head>
 
@@ -39,15 +40,26 @@
         <div class="auth">
             @auth
 
-                <form action="/logout" method="post">
-                    @csrf
-                    <button class="link logout" type="submit">Logout</button>
-                </form>
+
+                <a class="link" href="/cart">
+                    <img src="{{ asset('imgs/icons/cart.png') }}" alt="">
+                </a>
+
+                <div class="link">
+                    <img src="{{ asset('imgs/icons/profile.png') }}" alt="">
+                    <span>{{ auth()->user()->name }}</span>
+
+                </div>
+
+
+
             @endauth
 
             @guest
-                <a class="link" href="/register">Register</a>
-                <a class="link" href="/login">Login</a>
+                <a class="link" href="/login">
+                    <img src="{{ asset('imgs/icons/login.png') }}" alt="">
+                </a>
+                <span>Guest</span>
             @endguest
         </div>
     </div>

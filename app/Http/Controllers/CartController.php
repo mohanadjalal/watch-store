@@ -13,7 +13,10 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $carts = Cart::all()->where('user_id', auth()->user()->id);
+
+
+        return view('cart.show', ["carts" => $carts]);
     }
 
     /**
@@ -78,7 +81,6 @@ class CartController extends Controller
      */
     public function show(Cart $cart)
     {
-        //
     }
 
     /**
