@@ -42,3 +42,40 @@
     flex: 20%;
     text-align: center;
  }
+
+
+ .btn-delete { 
+   background-color: transparent;
+   text-align: center;
+   font-size: x-large;
+   font-weight: bold;
+   font-size: 3rem;
+   color : red ;
+   border: none;
+   cursor: pointer;
+   font-family:   'Courier New', Courier, monospace;
+   
+
+ }
+
+
+
+ .btn-delete:hover { 
+   
+ 
+   text-shadow: 0 0 3px #FF0000;
+
+ }
+
+
+ .btn-delete:active { 
+   color: rgb(218, 77, 77);
+ 
+ }
+
+ .cart-form { 
+   border: none;
+ }
+ 
+
+ 

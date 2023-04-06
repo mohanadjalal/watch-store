@@ -14,9 +14,15 @@ class CartController extends Controller
     public function index()
     {
         $carts = Cart::all()->where('user_id', auth()->user()->id);
+        $imgs = $carts->map(function ($c) {
+            $p = Product::find($c->product_id);
 
-
-        return view('cart.show', ["carts" => $carts]);
+            return $p->image;
+        });
+        if (!$carts->count()) {
+            return redirect('/products')->with('auth', 'there is no product in the carts ');
+        }
+        return view('cart.show', ["carts" => $carts, "imgs" => $imgs]);
     }
 
     /**
