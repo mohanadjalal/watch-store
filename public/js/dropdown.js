@@ -1,10 +1,12 @@
 
-const toggle = document.getElementById("link"); 
+const toggle = document.getElementById("auth-link"); 
 const dropdown = document.getElementById("dropdown"); 
 let showDropdown  = false; 
 
 
 function toggleDropdown() { 
+    showDropdown = !showDropdown
+
     if(showDropdown) { 
     dropdown.style.visibility="visible";
 
@@ -13,7 +15,6 @@ function toggleDropdown() {
 
     }
 
-    showDropdown = !showDropdown
 }
 
 toggle.addEventListener('click' , toggleDropdown)

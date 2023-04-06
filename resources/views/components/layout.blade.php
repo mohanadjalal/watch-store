@@ -21,6 +21,7 @@
 
 
 
+
     <div class="header">
         <div class="nav">
             <li class="nav-l"><a class="{{ request()->path() === '/' ? 'active' : '' }}" href="/">Home</a></li>
@@ -39,35 +40,34 @@
 
         <div class="auth">
             @auth
-
-
-                <a class="link" href="/cart">
-                    <img src="{{ asset('imgs/icons/cart.png') }}" alt="">
-                </a>
-
-                <div class="link" id="link" id="link">
+                <div class="auth-link" id="auth-link">
                     <img src="{{ asset('imgs/icons/profile.png') }}" alt="">
                     <span>{{ auth()->user()->name }}</span>
-
-
                 </div>
 
 
                 <ul class="dropdown" id="dropdown">
                     <li><a href="/logout">Logout</a></li>
-                    <li><a href="/logout">Profile</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li> <a href="/cart">
+                            <img class="cart-icon" src="{{ asset('imgs/icons/cart.png') }}" alt="">
+                        </a></li>
 
                 </ul>
 
             @endauth
 
             @guest
-                <a class="link" href="/login">
+                <a class="guest-link" href="/login">
                     <img src="{{ asset('imgs/icons/login.png') }}" alt="">
+                    <span>login</span>
                 </a>
-                <span>Guest</span>
+
             @endguest
         </div>
+
+
+
     </div>
 
 

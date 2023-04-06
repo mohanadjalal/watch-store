@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,10 @@ Route::post('login', [LoginController::class, 'store'])->middleware('guest');
 Route::get('logout', [LoginController::class, 'destroy'])->middleware('auth');
 
 
+
 Route::get('/cart', [CartController::class, "index"])->middleware('auth');
 Route::post('/cart', [CartController::class, "store"])->middleware('auth');
 Route::post('/cart/destroy/{cart}', [CartController::class, "destroy"])->middleware('auth');
+
+
+Route::get('profile', [ProfileController::class, "index"])->middleware('auth');

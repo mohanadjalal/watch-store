@@ -67,14 +67,14 @@ div.auth {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1rem;
+  margin-right: 4rem;
   font-size: 2rem;
   color: var(--first);
 
 
 }
 
-.link {
+.guest-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,23 +82,84 @@ div.auth {
   padding: .3rem .3rem;
   text-decoration: none;
   text-align: center;
-  font-size: large;
   cursor: pointer;
-}
-
-.link span {
-  margin-left: .3rem;
-  color: var(--first);
-  font-weight: bolder;
   font-family: monospace;
+  font-weight: bolder;
+  margin-left: .3rem;
+}
+
+
+
+
+.guest-link img {
+  width: 2.7rem;
   cursor: pointer;
 
-
+  border-radius: 50%;
+  padding: .3rem;
+  background-color: var(--second);
 }
+
+
+.guest-link img:hover {
+  width: 2.4rem;
+  padding: .5rem;
+
+  transition: ease-out .2s;
+}
+
+.guest-link:hover {
+  font-size: 106%;
+  transition: ease-out .2s;
+}
+
+.auth-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--first);
+  padding: .3rem .3rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  margin-left: .3rem;
+  gap: .2rem;
+}
+
+
+
+.auth-link img {
+  width: 2.4rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .3rem;
+  background-color: var(--second);
+}
+
+
+.auth-link img:hover {
+  width: 2rem;
+  padding: .5rem;
+
+  transition: ease-out .2s;
+}
+
+.auth-link:hover {
+  font-size: 1.3rem;
+  transition: ease-out .2s;
+}
+
+
+
 
 .dropdown {
   position: fixed;
-  top: 4rem;
+  top: 3rem;
+  right: 3.5rem;
+  margin: 0;
   background-color: var(--second);
   display: flex;
   flex-direction: column;
@@ -110,6 +171,8 @@ div.auth {
   box-shadow: 0px 5px 15px var(--fourth);
   visibility: hidden;
   /* transition: */
+  list-style-type: none;
+  width: 6rem;
 }
 
 .dropdown li {
@@ -136,21 +199,29 @@ div.auth {
 
 }
 
+.dropdown li a:hover {
+  padding: .7rem;
+  width: 1rem;
+  transition: ease-out .2s;
 
-.link img {
-  width: 2.7rem;
+}
+
+
+
+
+
+.cart-icon {
+  width: 1.5rem;
   cursor: pointer;
-
   border-radius: 50%;
-  padding: .3rem;
+  padding: .05rem;
   background-color: var(--second);
 }
 
 
-.link img:hover {
-  width: 2.4rem;
-  padding: .5rem;
-
+.cart-icon:hover {
+  width: 2rem;
+  padding: .1rem;
   transition: ease-out .2s;
 }
 
