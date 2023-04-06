@@ -45,13 +45,19 @@
                     <img src="{{ asset('imgs/icons/cart.png') }}" alt="">
                 </a>
 
-                <div class="link">
+                <div class="link" id="link" id="link">
                     <img src="{{ asset('imgs/icons/profile.png') }}" alt="">
                     <span>{{ auth()->user()->name }}</span>
+
 
                 </div>
 
 
+                <ul class="dropdown" id="dropdown">
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/logout">Profile</a></li>
+
+                </ul>
 
             @endauth
 
@@ -86,6 +92,8 @@
     <x-cart></x-cart>
 
     <script src="{{ asset('js/cart.js') }}"></script>
+    <script src="{{ asset('js/dropdown.js') }}"></script>
+
 
 
 </body>

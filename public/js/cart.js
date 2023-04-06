@@ -29,6 +29,8 @@ function toggleCart() {
     showCart= !showCart; 
 }
 
+
+
 cartHeader.addEventListener('click'  , toggleCart);
 
 
