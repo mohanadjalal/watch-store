@@ -46,3 +46,4 @@ Route::post('/cart/destroy/{cart}', [CartController::class, "destroy"])->middlew
 
 
 Route::get('profile', [ProfileController::class, "index"])->middleware('auth');
+Route::post('profile/{user}', [ProfileController::class, "update"])->middleware('auth');

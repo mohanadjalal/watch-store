@@ -13,7 +13,7 @@ function toggleCart() {
         cart.classList.remove("collapse");
         cart.classList.add("cart")
         cart.style.transition= " ease .7s"
-        cartName.innerHTML="hide Cart"
+        cartName.innerHTML="&ensp; Hide Cart"
 
 
     }else { 
@@ -21,7 +21,7 @@ function toggleCart() {
    cartList.classList.remove("show");
    cart.classList.add("collapse")
    cart.style.transition= " ease .7s"
-   cartName.innerHTML="Show Cart"
+   cartName.innerHTML="&ensp; Show Cart"
 
 
 

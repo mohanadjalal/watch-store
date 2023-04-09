@@ -3,7 +3,7 @@
     @if (auth()->user()->cart()->count() && request()->path() !== 'cart')
         <div class="cart collapse" id="cart">
             <div class="cart-header" id="cart-header">
-                <h4> <b id="cart-name">Show Cart</b>
+                <h4> <b id="cart-name"> &ensp;Show Cart</b>
                     <span class="count">{{ auth()->user()->cart()->count() }}</span>
                 </h4>
             </div>

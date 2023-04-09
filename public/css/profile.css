@@ -6,12 +6,12 @@
 
 }
 
-#name {
+.name {
     font-family: monospace;
 
 }
 
-#username {
+.username {
     margin-top: -.5rem;
     color: gray;
     font-weight: normal;
@@ -42,4 +42,41 @@ hr {
 
 .location {
     margin-top: 3rem;
+}
+
+edit-btn {}
+
+form {
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    display: none;
+
+}
+
+.form-input {
+    width: 100%;
+    display: grid;
+
+    align-items: center;
+    padding: .1rem;
+    margin: 1rem;
+}
+
+
+.form-input input {
+    height: 2rem;
+}
+
+button[type="submit"] {
+    margin: 1rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }
