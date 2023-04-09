@@ -1,6 +1,9 @@
 *,
 ::after,
-::before {}
+::before {
+  font-family: monospace;
+
+}
 
 :root {
   --first: #DCD7C9;

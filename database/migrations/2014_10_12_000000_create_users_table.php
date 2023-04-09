@@ -16,6 +16,8 @@ return new class extends Migration {
             $table->string('email')->unique();
             $table->string('username')->unique();
             $table->string('password');
+            $table->string('phone')->unique();
+            $table->text("location")->nullable();
             $table->boolean('isAdmin')->default(false);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

@@ -1,0 +1,45 @@
+.main {
+    width: 85%;
+    margin: auto;
+    color: var(--fourth);
+    margin-top: 15rem;
+
+}
+
+#name {
+    font-family: monospace;
+
+}
+
+#username {
+    margin-top: -.5rem;
+    color: gray;
+    font-weight: normal;
+
+
+
+}
+
+hr {
+    background-color: red;
+}
+
+.contact-info {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.contact-info h3 {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.location {
+    margin-top: 3rem;
+}
