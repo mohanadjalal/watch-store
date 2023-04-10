@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
@@ -47,3 +48,7 @@ Route::post('/cart/destroy/{cart}', [CartController::class, "destroy"])->middlew
 
 Route::get('profile', [ProfileController::class, "index"])->middleware('auth');
 Route::post('profile/{user}', [ProfileController::class, "update"])->middleware('auth');
+
+
+Route::get('payment', [PaymentController::class, "create"])->middleware(("customer"));
+Route::post('payment', [PaymentController::class, "store"])->middleware(("customer"));
