@@ -77,6 +77,27 @@
 
     </form>
 
+    @auth
+        @cannot('admin')
+            <div class="payments">
+
+                @foreach ($user->payments as $payment)
+                    <div class="payment">
+                        <div class="info">
+                            <h3>total: {{ $payment->total }}$</h3>
+                            <p>location: <br> {{ $payment->location }}</h3>
+                        </div>
+                        <x-cart-table :carts="$payment->cart"></x-cart-table>
+
+                    </div>
+                @endforeach
+
+
+            </div>
+        @endcannot
+
+    @endauth
+
 
     <script src="{{ asset('js/profile.js') }}"></script>
 </x-layout>
