@@ -25,10 +25,10 @@
                         <h4 class="flex-item">X{{ $cart->quantity }}</h4>
                         <h4 class="flex-item">{{ $cart->total * $cart->quantity }}$</h4>
 
-                        <form style="border: none" class="flex-item" action="/cart/destroy/{{ $cart->id }}"
-                            method="POST">
+                        <form style="border: none" id="cart-s-fotm" class="flex-item"
+                            action="/cart/destroy/{{ $cart->id }}" method="POST">
                             @csrf
-                            <button type="submit">Del</button>
+                            <button id="cart-btn-del" type="submit">Del</button>
                         </form>
                     </div>
                 @endforeach

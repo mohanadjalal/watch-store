@@ -332,6 +332,7 @@ span.success-flash {
   border-radius: 1rem;
   width: 25vw;
   max-height: 45vh;
+  overflow: hidden;
   overflow-y: auto;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -358,6 +359,11 @@ span.success-flash {
 }
 
 
+.cart-form {
+  display: inline-block;
+}
+
+#cart-btn-del {}
 
 
 
@@ -425,5 +431,7 @@ span.success-flash {
   border-radius: 50%;
   padding: .2rem;
   color: white;
+
+
 
 }

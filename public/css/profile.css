@@ -46,7 +46,7 @@ hr {
 
 edit-btn {}
 
-form {
+#edit-form {
     width: 70%;
     margin: auto;
     padding: 1rem;
@@ -69,8 +69,8 @@ form {
     height: 2rem;
 }
 
-button[type="submit"] {
-    margin: 1rem;
+#submit-btn {
+    /* margin: 1rem; */
 }
 
 .show {
@@ -164,8 +164,4 @@ button[type="submit"] {
 .btn-delete:active {
     color: rgb(218, 77, 77);
 
-}
-
-.cart-form {
-    border: none;
 }
