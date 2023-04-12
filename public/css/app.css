@@ -2,7 +2,7 @@
 ::after,
 ::before {
   font-family: monospace;
-
+  box-sizing: border-box;
 }
 
 :root {

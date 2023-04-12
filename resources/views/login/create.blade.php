@@ -1,9 +1,8 @@
-<x-layout :css="'form.css'">
+<x-layout :css="'auth.css'">
 
 
-    <h1>login </h1>
 
-    <form class="create-form" action="login" method="post">
+    <form class="login-form" action="login" method="post">
         @csrf
 
         <div class="form-input">
@@ -24,12 +23,18 @@
         </div>
 
         <div class="form-input">
-            <button type="submit">login</button>
+            <button id="auth-btn" type="submit">login</button>
         </div>
 
 
-        @error('login')
-            <span style="color:red; text-align:center;">{{ $message }}</span>
-        @enderror
+
+
+        <a class="signup" href="/register">OR Create Account </a>
+
+
     </form>
+    @error('login')
+        <span class="login-error">{{ $message }}</span>
+    @enderror
+
 </x-layout>

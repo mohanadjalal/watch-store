@@ -50,5 +50,4 @@ Route::get('profile', [ProfileController::class, "index"])->middleware('auth');
 Route::post('profile/{user}', [ProfileController::class, "update"])->middleware('auth');
 
 
-Route::get('payment', [PaymentController::class, "create"])->middleware(("customer"));
 Route::post('payment', [PaymentController::class, "store"])->middleware(("customer"));

@@ -1,9 +1,9 @@
-<x-layout :css="'form.css'">
+<x-layout :css="'auth.css'">
 
 
-    <h1>register </h1>
 
-    <form class="create-form" action="register" method="post">
+
+    <form class="register-form" action="register" method="post">
         @csrf
 
         <div class="form-input">
@@ -11,7 +11,7 @@
             <input type="text" name="name" id="name" value="{{ old('name') }}" />
 
             @error('name')
-                <span style="color:red">{{ $message }}</span>
+                <span class="error">{{ $message }}</span>
             @enderror
         </div>
 
@@ -21,7 +21,7 @@
 
 
             @error('email')
-                <span style="color:red">{{ $message }}</span>
+                <span class="error">{{ $message }}</span>
             @enderror
         </div>
 
@@ -29,7 +29,7 @@
             <label for="username">username</label>
             <input type="text" name="username" id="username" value="{{ old('username') }}" />
             @error('username')
-                <span style="color:red">{{ $message }}</span>
+                <span class="error">{{ $message }}</span>
             @enderror
         </div>
 
@@ -37,12 +37,14 @@
             <label for="password">password</label>
             <input type="password" name="password" id="password" value="{{ old('password') }}" />
             @error('password')
-                <span style="color:red">{{ $message }}</span>
+                <span class="error">{{ $message }}</span>
             @enderror
         </div>
 
         <div class="form-input">
-            <button type="submit">Register</button>
+            <button id="auth-btn" type="submit">Register</button>
         </div>
+
+        <a class="signup" href="/login">Already Have Account </a>
     </form>
 </x-layout>

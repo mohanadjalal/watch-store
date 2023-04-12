@@ -1,0 +1,115 @@
+.login-form {
+    width: 50%;
+    margin: auto;
+    margin-top: 10rem;
+
+}
+
+.register-form {
+    width: 50%;
+    margin: auto;
+    margin-top: 7rem;
+
+}
+
+
+h1 {
+    font-size: x-large;
+}
+
+.form-input {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 1rem;
+    font-size: 2rem;
+
+
+}
+
+.form-input label {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+input {
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    padding: 1rem;
+    margin-top: .1rem;
+    border: 1px solid sienna;
+    outline-color: var(--second);
+    border-radius: .5rem;
+}
+
+input:focus {
+    box-shadow: 15px 15px 10px var(--second);
+    margin-bottom: .2rem;
+
+}
+
+.signup {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: var(--third);
+    opacity: .8;
+    transition: ease .2s;
+
+}
+
+.signup:hover {
+    opacity: 1;
+    font-weight: 600;
+
+}
+
+#auth-btn {
+    width: 30%;
+    margin: auto;
+    padding: .6rem 1.2rem;
+    font-size: 1.5rem;
+    color: var(--first);
+    background-color: var(--third);
+    border: none;
+    border-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: ease .2s;
+
+}
+
+#auth-btn:hover {
+    background-color: var(--fourth);
+
+}
+
+#auth-btn:active {
+
+    padding: .5rem 1rem;
+
+}
+
+.login-error {
+    display: block;
+    color: red;
+    text-shadow: 1px;
+    border-top: solid;
+    border-bottom: solid;
+    padding: .5rem;
+
+    margin: auto;
+    width: 35%;
+    margin-top: 2rem;
+
+
+}
+
+span.error {
+    font-size: 1.2rem;
+}

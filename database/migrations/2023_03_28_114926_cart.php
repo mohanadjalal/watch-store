@@ -20,6 +20,7 @@ return new class extends Migration {
             $table->unsignedBigInteger("product_id");
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreign('product_id')->references('id')->on('products')->cascadeOnUpdate()->cascadeOnDelete();
+
             $table->string('product_name');
             $table->timestamps();
         });
