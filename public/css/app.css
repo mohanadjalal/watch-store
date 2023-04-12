@@ -58,11 +58,17 @@ div.search {
   color: var(--first);
 }
 
-input[name=search] {
+#search {
   color: var(--fourth);
+  transition: ease .2s;
   padding: .18rem;
+  outline-color: var(--second);
 }
 
+#search:focus {
+  box-shadow: 0px 0px 21px 0px var(--first);
+
+}
 
 /**********************************auth ************************************/
 

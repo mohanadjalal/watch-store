@@ -5,7 +5,7 @@
         <h1>Products </h1>
 
         @can('admin')
-            <a class="add-btn" href="/products/create">New Product</a>
+            <a class="product-btn" href="/products/create">New Product</a>
         @endcan
 
 

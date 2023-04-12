@@ -1,4 +1,4 @@
-<x-layout :title="'Create Product '" :css="'form.css'">
+<x-layout :title="'Create Product '" :css="'product-forms.css'">
     <form class="create-form" action="/product/store" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-input">
@@ -35,7 +35,7 @@
             @enderror
         </div>
 
-        <div class="form-input">
+        <div class="file">
             <label class="label" for="image">image : </label>
             <input type="file" name="image" id="image" accept="image/*" value="{{ old('image') }}">
 
@@ -44,8 +44,10 @@
             @enderror
         </div>
 
-        <button type="submit">Add Product</button>
-        <a href={{ url()->previous() }}>Cancel</a>
+        <div class="form-btns">
+            <button type="submit" class="btns" id="save-btn">Save</button>
+            <a id="cancel-btn" class="btns" href={{ url()->previous() }}>Cancel</a>
+        </div>
 
     </form>
 
