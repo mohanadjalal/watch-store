@@ -1,0 +1,15 @@
+.users {
+    width: 90%;
+    margin: auto;
+}
+
+.user {
+    display: flex;
+
+
+}
+
+.user h4,
+.user h2 {
+    flex: 25;
+}

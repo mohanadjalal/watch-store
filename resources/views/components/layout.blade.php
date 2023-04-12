@@ -49,9 +49,17 @@
                 <ul class="dropdown" id="dropdown">
                     <li><a href="/logout">Logout</a></li>
                     <li><a href="/profile">Profile</a></li>
-                    <li> <a href="/cart">
-                            <img class="cart-icon" src="{{ asset('imgs/icons/cart.png') }}" alt="">
-                        </a></li>
+                    @can('customer')
+                        <li> <a href="/cart">
+                                <img class="cart-icon" src="{{ asset('imgs/icons/cart.png') }}" alt="">
+                            </a></li>
+                    @endcan
+
+                    @can('admin')
+                        <li> <a href="/users">
+                                <img class="cart-icon" src="{{ asset('imgs/icons/users.png') }}" alt="">
+                            </a></li>
+                    @endcan
 
                 </ul>
 

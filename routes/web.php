@@ -6,6 +6,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -50,4 +51,5 @@ Route::get('profile', [ProfileController::class, "index"])->middleware('auth');
 Route::post('profile/{user}', [ProfileController::class, "update"])->middleware('auth');
 
 
+Route::get("users", [UserController::class, "index"])->middleware("admin");
 Route::post('payment', [PaymentController::class, "store"])->middleware(("customer"));
