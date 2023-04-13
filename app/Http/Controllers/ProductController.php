@@ -21,7 +21,7 @@ class ProductController extends Controller
 
 
 
-        return view('products', ['products' => $products->paginate(8)]);
+        return view('products', ['products' => $products->paginate(12)]);
     }
 
     /**

@@ -45,8 +45,9 @@
         </div>
 
         <div class="form-btns">
-            <button type="submit" class="btns" id="save-btn">Save</button>
             <a id="cancel-btn" class="btns" href={{ url()->previous() }}>Cancel</a>
+            <button type="submit" class="btns" id="save-btn">Save</button>
+
         </div>
 
     </form>

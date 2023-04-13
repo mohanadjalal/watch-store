@@ -1,9 +1,9 @@
-<x-layout :title="'Create Product '" :css="'form.css'">
+<x-layout :title="'Create Product '" :css="'product-forms.css'">
     <form class="create-form" action="/product/update/{{ $product->id }}" method="post">
         @csrf
         <div class="form-input">
             <label class="label" class="input" for="title">Title : </label>
-            <input class="input" type="text" name="title" id="title" value={{ $product->title }} required
+            <input class="input" type="text" name="title" id="title" value="{{ $product->title }}" required
                 value="{{ old('title') }}">
             @error('title')
                 <span class="error">{{ $message }}</span>
@@ -38,8 +38,11 @@
             @enderror
         </div>
 
-        <button type="submit">Edit Product</button>
-        <a href='/product/{{ $product->id }}'>Cancel</a>
+        <div class="form-btns">
+            <a id="cancel-btn" class="btns" href='/product/{{ $product->id }}'>Cancel</a>
+            <button id="save-btn" class="btns" type="submit">Edit </button>
+
+        </div>
     </form>
 
 </x-layout>

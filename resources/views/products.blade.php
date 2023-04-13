@@ -10,11 +10,13 @@
 
 
         <div class="products">
-
-            @foreach ($products as $product)
-                <x-product :product="$product"></x-product>
-            @endforeach
-
+            @if ($products->count())
+                @foreach ($products as $product)
+                    <x-product :product="$product"></x-product>
+                @endforeach
+            @else
+                <h1>There is no results</h1>
+            @endif
 
 
 
