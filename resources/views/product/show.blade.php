@@ -9,7 +9,7 @@
             <h3>Price : {{ $product->price }}$</h3>
             <h3>Quantity : {{ $product->quantity }}</h3>
             <p> {{ $product->description }} </p>
-            <a href="/products">back</a>
+            <a class="back" href="/products"> Back </a>
 
 
 

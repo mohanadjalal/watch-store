@@ -1,38 +1,37 @@
-
-
-
-div.product { 
-    display:  flex ; 
+div.product {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 70vh;
     margin: auto;
     position: relative;
     background-color: var(--third);
+    border-radius: 5rem 1rem;
+    color: var(--first);
 }
 
-.img { 
+.img {
     width: 30%;
     height: 90%;
-    background-repeat:no-repeat ;
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     background-color: var(--fourth);
     margin-left: 1rem;
-    border-radius: 2rem;
-    border:  groove var(--first);
+    border-radius: 5rem 1rem;
+    border: groove var(--first);
 }
- 
 
-.info  { 
+
+.info {
     width: 70%;
     height: 100%;
     padding: 1rem;
-    
+
 }
 
-.btns { 
+.btns {
     position: absolute;
     bottom: 1rem;
     right: 4rem;
@@ -45,7 +44,7 @@ div.product {
 
 
 
-.info p { 
+.info p {
     text-align: left;
     width: 80%;
     font-size: larger;
@@ -53,7 +52,7 @@ div.product {
 }
 
 
-.btn { 
+.btn {
     padding: .8rem .16rem;
     width: 6rem;
     text-align: center;
@@ -63,30 +62,61 @@ div.product {
 
     border-radius: .5rem;
     cursor: pointer;
-    
+    transition: .3s ease;
+
 }
 
-.btn-edit , .btn-edit:active{ 
+.btn-edit,
+.btn-edit:active {
     background-color: #DCD7C9;
-    border: solid .15rem #2C3639 ;
+    border: solid .15rem #2C3639;
 
 }
 
-.btn-edit:hover { 
-    background-color:#2C3639 ;
-    border: solid .15rem  black;
+.btn-edit:hover {
+    background-color: #2C3639;
+    border: solid .15rem black;
     color: #DCD7C9;
 }
 
-.btn-del , .btn-del:active{ 
+.btn-del,
+.btn-del:active {
     background-color: #DCD7C9;
-    border: solid .15rem rgb(189, 0, 0) ;
+    border: solid .15rem rgb(189, 0, 0);
     color: red;
 
 }
 
-.btn-del:hover { 
-    background-color:rgb(189, 0, 0) ;
-    border: solid .15rem  #DCD7C9;
-    color:  #DCD7C9;
+.btn-del:hover {
+    background-color: rgb(189, 0, 0);
+    border: solid .15rem #DCD7C9;
+    color: #DCD7C9;
+}
+
+.back {}
+
+a.back {
+
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: underline;
+    padding: .8rem 1.6rem;
+    transition: .3s ease;
+    color: var(--first);
+    font-weight: 550;
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 22% 100%, 0 50%);
+
+}
+
+a.back:hover {
+    text-decoration: none;
+
+    background-color: var(--first);
+    color: var(--fourth);
+
+}
+
+a.back:active {
+    outline: inset var(--first) .2rem;
 }

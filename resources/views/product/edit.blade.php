@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-input">
-            <label class="label" for="quantity">Quentity : </label>
+            <label class="label" for="quantity">Quantity : </label>
             <input class="input" type="number" name="quantity" id="quantity" value={{ $product->quantity }} required
                 value="{{ old('quantity') }}">
             @error('quantity')
