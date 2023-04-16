@@ -1,8 +1,9 @@
 <x-layout :css="'product-page.css'" :title="$product->title">
 
     <div class="product ">
-        <div style="background-image:url('{{ asset($product->image) }}')" class="img">
 
+        <div style="background-image:url('{{ asset('storage/images/' .$product->images()->get()->first()->path) ?? 'default.png' }}')"
+            class="img">
         </div>
         <div class="info">
             <h1>{{ $product->title }}</h1>

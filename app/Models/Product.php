@@ -19,4 +19,11 @@ class Product extends Model
         return $this->hasOne(Cart::class);
     }
 
+
+    public function images()
+    {
+        return $this->hasMany(Images::class);
+    }
+
+
 }

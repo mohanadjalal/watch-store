@@ -37,7 +37,7 @@
 
         <div class="file">
             <label class="label" for="image">image : </label>
-            <input type="file" name="image" id="image" accept="image/*" value="{{ old('image') }}">
+            <input type="file" name="images[]" id="image" accept="image/*" value="{{ old('image') }}" multiple>
 
             @error('image')
                 <span class="error">{{ $message }}</span>

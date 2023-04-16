@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Images;
 use App\Models\Product;
 use Gate;
 use Illuminate\Http\Request;
@@ -45,26 +46,34 @@ class ProductController extends Controller
             "price" => ['required'],
             "quantity" => ['required'],
             "description" => ['required', 'min:0'],
-            "image" => [
+            "images" => [
                 'required',
             ]
         ]);
 
 
-        $imgPath = "";
-        if ($req->hasFile('image')) {
-            $imgPath = $req->file("image");
-        }
 
 
-        Product::create([
+
+        $product = Product::create([
             "title" => $req->title,
             "price" => $req->price,
             "quantity" => $req->quantity,
             "description" => $req->description,
-            "image" => "storage/products/" . now()->minutes(2) . "." . $req->file('image')->getClientOriginalExtension()
+
         ]);
-        $imgPath->storeAs('products', now()->minutes(2) . "." . $req->file('image')->getClientOriginalExtension(), "public");
+
+
+        foreach ($req->file("images") as $image) {
+            $path = now()->minutes(2) . $image->getClientOriginalName();
+            $image->storeAs('products', $path, "public");
+            Images::create([
+                "path" => $path,
+                "product_id" => $product->id
+            ]);
+
+        }
+
 
         return redirect('/products')->with('success', "product added successfully");
 
