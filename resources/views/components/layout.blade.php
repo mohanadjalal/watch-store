@@ -8,6 +8,7 @@
 
     <title>{{ $title ?? 'Watch Store' }}</title>
 
+    <link rel="stylesheet" href="/../css/slide-show.css">
     <link rel="stylesheet" href="/../css/app.css">
     <link rel="stylesheet" href="/../css/{{ $css ?? '' }}">
 
