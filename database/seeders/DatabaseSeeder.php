@@ -16,18 +16,18 @@ class DatabaseSeeder extends Seeder
     {
 
         User::factory()->create([
-            'name' => 'Mohannad Jay',
-            'email' => 'mohanad@jay.com',
-            "username" => 'izzra',
+            'name' => 'mhmd attalah',
+            'email' => 'mhmd@gmail.com',
+            "username" => 'mhmd01',
             'password' => "12312312",
             'isAdmin' => true,
 
         ]);
 
         User::factory()->create([
-            'name' => 'aysar gh',
-            'email' => 'aysar@gh.com',
-            "username" => 'gh123',
+            'name' => 'ahmad draidy ',
+            'email' => 'drd.ahmad@hotmail.com',
+            "username" => 'drd12',
             'password' => "12312312",
             'isAdmin' => false,
 
@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
 
-        Product::factory(10)->create();
+        
 
 
 

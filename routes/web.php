@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', fn() => view('home', ['images' => Product::find(18)->first()])); //here 
+Route::get('/', fn() => view('home' )); //here 
 
 Route::get('/products', [ProductController::class, "index"]);
 Route::get('/product/{product}', [ProductController::class, "show"]);

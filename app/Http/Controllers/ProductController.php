@@ -65,8 +65,9 @@ class ProductController extends Controller
 
 
         foreach ($req->file("images") as $image) {
-            $path = now()->minutes(2) . $image->getClientOriginalName();
-            $image->storeAs('products', $path, "public");
+       
+            $path = now()->minutes(2) . '.' .$image->getClientOriginalExtension(); 
+            $image->storeAs('public', $path,);
             Images::create([
                 "path" => $path,
                 "product_id" => $product->id

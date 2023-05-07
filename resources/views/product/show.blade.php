@@ -2,10 +2,11 @@
 
     <div class="product ">
 
-        <div style="background-image:url('{{ asset('storage/images/' .$product->images()->get()->first()->path) ?? 'default.png' }}')"
+        <div style="background-image:url('{{ asset('storage/' .$product->images()->get()->first()->path) ?? 'default.png' }}')"
             class="img">
         </div>
         <div class="info">
+            
             <h1>{{ $product->title }}</h1>
             <h3>Price : {{ $product->price }}$</h3>
             <h3>Quantity : {{ $product->quantity }}</h3>
